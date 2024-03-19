@@ -2,16 +2,24 @@
 
 /**
  *
- * @author Khoirul Umam
+ * @author Owen Oliveira
  */
 public class ProgrammableRemoteControl {
-    Command slot;
-    
-    public void setCommand(Command command) {
-        slot = command;
+    Command[] slots;
+
+    public ProgrammableRemoteControl(int numberOfSlots) {
+        slots = new Command[numberOfSlots];
     }
-    
-    public void buttonWasPressed() {
-        slot.execute();
+
+    public void setCommand(int buttonNumber, Command command) {
+        slots[buttonNumber] = command;
+    }
+
+    public void buttonWasPressed(int buttonNumber) {
+        if (buttonNumber >= 0 && buttonNumber < slots.length && slots[buttonNumber] != null) {
+            slots[buttonNumber].execute();
+        } else {
+            System.out.println("No command assigned to button " + buttonNumber);
+        }
     }
 }

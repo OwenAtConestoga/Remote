@@ -4,10 +4,10 @@
  */
 public class OutdoorLight {
     public void on() {
-        System.out.println("Living room lights are now on");
+        System.out.println("Outdoor lights are now on");
     }
     
     public void off() {
-        System.out.println("Living room lights are now off");
+        System.out.println("Outdoor lights are now off");
     }
 }
