@@ -1,8 +1,8 @@
 /**
- *
- * @author Owen Oliveira
- */
-public class LivingRoomLights {
+*
+* @author Owen Oliveira
+*/
+public class OutdoorLight {
     private boolean isOn;
 
     public void toggle() {
@@ -14,12 +14,12 @@ public class LivingRoomLights {
     }
 
     public void on() {
-        System.out.println("Living room lights are now on");
+        System.out.println("Outdoor light is now on");
         isOn = true;
     }
 
     public void off() {
-        System.out.println("Living room lights are now off");
+        System.out.println("Outdoor light is now off");
         isOn = false;
     }
 }

@@ -3,11 +3,23 @@
  * @author Owen Oliveira
  */
 public class AirCondition {
-    public void on() {
-        System.out.println("Air Condition is on");
+    private boolean isOn;
+
+    public void toggle() {
+        if (isOn) {
+            turnOff();
+        } else {
+            turnOn();
+        }
     }
-    
-    public void off() {
-        System.out.println("Air Condition is off");
+
+    public void turnOn() {
+        System.out.println("Air conditioner is now on");
+        isOn = true;
+    }
+
+    public void turnOff() {
+        System.out.println("Air conditioner is now off");
+        isOn = false;
     }
 }
